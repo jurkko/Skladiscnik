@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -15,7 +16,7 @@ namespace Skladiščnik
     public partial class Form1 : Form
     {
 
-    
+        public string conString = "Data Source=DESKTOP-2KUD0UO;Initial Catalog=Skladiscnik;Integrated Security=True";
 
         public Form1()
         {
@@ -31,26 +32,14 @@ namespace Skladiščnik
         {
             
             textBox2.PasswordChar = '*';
-            pictureBox3.BackgroundImage = Properties.Resources.geslo1;
-            panel2.ForeColor = Color.FromArgb(78, 184, 206);
-            textBox1.ForeColor = Color.FromArgb(78, 184, 206);
-
-            pictureBox2.BackgroundImage = Properties.Resources.uporabnik2;
-            panel2.ForeColor = Color.WhiteSmoke;
-            textBox1.ForeColor = Color.WhiteSmoke;
+           
 
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             
-            pictureBox2.BackgroundImage = Properties.Resources.uporabnik2;
-            panel1.ForeColor = Color.FromArgb(78, 184, 206);
-            textBox1.ForeColor = Color.FromArgb(78, 184, 206);
-
-            pictureBox2.BackgroundImage = Properties.Resources.uporabnik1;
-            panel1.ForeColor = Color.WhiteSmoke;
-            textBox1.ForeColor = Color.WhiteSmoke;
+            
 
         }
 
@@ -76,7 +65,26 @@ namespace Skladiščnik
 
         private void button1_Click(object sender, EventArgs e)
         {
+            SqlConnection con = new SqlConnection(conString);
+            con.Open();
+            if (con.State == System.Data.ConnectionState.Open)
+            {
+                string preveri = "Select * from Uporabniki Where Uporabniskoime= '"+textBox1.Text.Trim()+"' and Geslo = '" + textBox2.Text.Trim() + "'";
+                SqlDataAdapter sda = new SqlDataAdapter(preveri, con);
+                DataTable dttbl = new DataTable();
+                sda.Fill(dttbl);
+                if (dttbl.Rows.Count == 1)
+                {
+                    MessageBox.Show("Nibba u in");
+                    this.Hide();
+                    Form2 form2 = new Form2();
+                    form2.ShowDialog();
+                } else
+                {
+                    MessageBox.Show(" Napacno geslo ali uporabnisko ime");
+                }
 
+            }
         }
 
         private void Form1_MouseMove(object sender, MouseEventArgs e)
@@ -103,6 +111,11 @@ namespace Skladiščnik
         private void button3_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

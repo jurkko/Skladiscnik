@@ -8,3 +8,4 @@ C:\Users\Jure\source\repos\Skladiščnik\Skladiščnik\obj\Debug\Skladiščnik.c
 C:\Users\Jure\source\repos\Skladiščnik\Skladiščnik\obj\Debug\Skladiščnik.csproj.CoreCompileInputs.cache
 C:\Users\Jure\source\repos\Skladiščnik\Skladiščnik\obj\Debug\Skladiščnik.exe
 C:\Users\Jure\source\repos\Skladiščnik\Skladiščnik\obj\Debug\Skladiščnik.pdb
+C:\Users\Jure\source\repos\Skladiščnik\Skladiščnik\obj\Debug\Skladiščnik.Form2.resources
