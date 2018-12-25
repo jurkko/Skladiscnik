@@ -39,6 +39,8 @@ namespace Skladiščnik
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             
+
+
             
 
         }
@@ -116,6 +118,30 @@ namespace Skladiščnik
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void textBox1_Click(object sender, EventArgs e)
+        {
+            textBox1.Clear();
+            panel1.BackColor = Color.FromArgb(78, 184, 206);
+            panel2.BackColor = Color.FromArgb(255, 255, 255);
+            textBox1.ForeColor = Color.FromArgb(78, 184, 206);
+            textBox2.ForeColor = Color.FromArgb(255, 255, 255);
+
+            pictureBox2.Image= Properties.Resources.uporabnik1;
+            pictureBox3.Image = Properties.Resources.geslo2;
+           
+        }
+
+        private void textBox2_Click(object sender, EventArgs e)
+        {
+            textBox2.Clear();
+            panel1.BackColor = Color.FromArgb(255, 255, 255);
+            panel2.BackColor = Color.FromArgb(78, 184, 206);
+            textBox2.ForeColor = Color.FromArgb(78, 184, 206);
+            textBox1.ForeColor = Color.FromArgb(255, 255, 255);
+            pictureBox3.Image = Properties.Resources.geslo1;
+            pictureBox2.Image = Properties.Resources.uporabnik2;
         }
     }
 }

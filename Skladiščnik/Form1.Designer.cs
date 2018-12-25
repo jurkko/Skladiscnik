@@ -57,6 +57,7 @@
             this.textBox1.Size = new System.Drawing.Size(195, 19);
             this.textBox1.TabIndex = 3;
             this.textBox1.Text = "Uporabnisko ime";
+            this.textBox1.Click += new System.EventHandler(this.textBox1_Click);
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textBox2
@@ -70,6 +71,7 @@
             this.textBox2.Size = new System.Drawing.Size(145, 19);
             this.textBox2.TabIndex = 4;
             this.textBox2.Text = "Geslo";
+            this.textBox2.Click += new System.EventHandler(this.textBox2_Click);
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // panel1
@@ -91,9 +93,10 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(78)))), ((int)(((byte)(184)))), ((int)(((byte)(206)))));
+            this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(59, 312);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(227, 42);
