@@ -12,6 +12,8 @@ namespace Skladiščnik
 {
     public partial class Form2 : Form
     {
+        List<Panel> listPanel = new List<Panel>();
+        int index=0;
         public Form2()
         {
             InitializeComponent();
@@ -19,7 +21,9 @@ namespace Skladiščnik
 
         private void Form2_Load(object sender, EventArgs e)
         {
-
+            listPanel.Add(panelazaloga);
+            listPanel.Add(panelaodhodi);
+            listPanel[index].BringToFront();
         }
 
         
@@ -50,6 +54,44 @@ namespace Skladiščnik
         }
 
         private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            index = 1;
+            panelanav.Height = prihodi.Height;
+            panelanav.Top = prihodi.Top;
+            listPanel[index].BringToFront();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void zaloga_Click(object sender, EventArgs e)
+        {
+            index = 0;
+            panelanav.Height = zaloga.Height;
+            panelanav.Top = zaloga.Top;
+            listPanel[index].BringToFront();
+        }
+
+        private void narocila_Click(object sender, EventArgs e)
+        {
+            panelanav.Height = narocila.Height;
+            panelanav.Top = narocila.Top;
+        }
+
+        private void dobavnice_Click(object sender, EventArgs e)
+        {
+            panelanav.Height = dobavnice.Height;
+            panelanav.Top = dobavnice.Top;
+        }
+
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }
