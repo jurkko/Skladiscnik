@@ -21,7 +21,37 @@ namespace Skladiščnik
         public Form1()
         {
             InitializeComponent();
+            izhod1.MouseEnter += izhod1gumbHover;
+            izhod1.MouseLeave += izhod1gumbLeave;
+
+            mini1.MouseEnter += mini1gumbHover;
+            mini1.MouseLeave += mini1gumbLeave;
+
+            
         }
+
+        private void izhod1gumbHover(object sender, EventArgs e)
+        {
+            
+            izhod1.BackColor = Color.FromArgb(233, 28, 28);
+        }
+
+        private void izhod1gumbLeave(object sender, EventArgs e)
+        {
+            izhod1.BackColor = Color.FromArgb(209, 228, 251);
+        }
+
+        private void mini1gumbHover(object sender, EventArgs e)
+        {
+
+            mini1.BackColor = Color.FromArgb(250, 143, 15);
+        }
+
+        private void mini1gumbLeave(object sender, EventArgs e)
+        {
+            mini1.BackColor = Color.FromArgb(209, 228, 251);
+        }
+
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
@@ -77,10 +107,12 @@ namespace Skladiščnik
                 sda.Fill(dttbl);
                 if (dttbl.Rows.Count == 1)
                 {
-                    MessageBox.Show("Nibba u in");
+                   
                     this.Hide();
                     Form2 form2 = new Form2();
                     form2.ShowDialog();
+                    
+                    
                 } else
                 {
                     MessageBox.Show(" Napacno geslo ali uporabnisko ime");
@@ -167,6 +199,16 @@ namespace Skladiščnik
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void izhod1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void Mini1_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }

@@ -1,7 +1,6 @@
 C:\Users\Jure\source\repos\Skladiščnik\Skladiščnik\bin\Debug\Skladiščnik.exe.config
 C:\Users\Jure\source\repos\Skladiščnik\Skladiščnik\bin\Debug\Skladiščnik.exe
 C:\Users\Jure\source\repos\Skladiščnik\Skladiščnik\bin\Debug\Skladiščnik.pdb
-C:\Users\Jure\source\repos\Skladiščnik\Skladiščnik\obj\Debug\Skladiščnik.csprojAssemblyReference.cache
 C:\Users\Jure\source\repos\Skladiščnik\Skladiščnik\obj\Debug\Skladiščnik.Form1.resources
 C:\Users\Jure\source\repos\Skladiščnik\Skladiščnik\obj\Debug\Skladiščnik.Properties.Resources.resources
 C:\Users\Jure\source\repos\Skladiščnik\Skladiščnik\obj\Debug\Skladiščnik.csproj.GenerateResource.cache
@@ -9,3 +8,4 @@ C:\Users\Jure\source\repos\Skladiščnik\Skladiščnik\obj\Debug\Skladiščnik.c
 C:\Users\Jure\source\repos\Skladiščnik\Skladiščnik\obj\Debug\Skladiščnik.exe
 C:\Users\Jure\source\repos\Skladiščnik\Skladiščnik\obj\Debug\Skladiščnik.pdb
 C:\Users\Jure\source\repos\Skladiščnik\Skladiščnik\obj\Debug\Skladiščnik.Form2.resources
+C:\Users\Jure\source\repos\Skladiščnik\Skladiščnik\obj\Debug\Skladiščnik.csprojAssemblyReference.cache

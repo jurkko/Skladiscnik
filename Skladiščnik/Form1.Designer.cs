@@ -35,14 +35,14 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.mini1 = new Skladiščnik.CircleButton();
+            this.izhod1 = new Skladiščnik.CircleButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel4.SuspendLayout();
@@ -119,31 +119,6 @@
             this.panel3.TabIndex = 10;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
-            // button3
-            // 
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(60)))));
-            this.button3.Image = global::Skladiščnik.Properties.Resources.icons8_minimize_window_32;
-            this.button3.Location = new System.Drawing.Point(424, 2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(23, 23);
-            this.button3.TabIndex = 12;
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // button2
-            // 
-            this.button2.BackgroundImage = global::Skladiščnik.Properties.Resources.icons8_delete_50;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(60)))));
-            this.button2.Image = global::Skladiščnik.Properties.Resources.icons8_delete_50;
-            this.button2.Location = new System.Drawing.Point(453, 1);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(20, 20);
-            this.button2.TabIndex = 11;
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Skladiščnik.Properties.Resources.uporabnik2;
@@ -213,17 +188,42 @@
             this.pictureBox1.TabIndex = 18;
             this.pictureBox1.TabStop = false;
             // 
+            // mini1
+            // 
+            this.mini1.BackColor = System.Drawing.Color.White;
+            this.mini1.CausesValidation = false;
+            this.mini1.FlatAppearance.BorderSize = 0;
+            this.mini1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.mini1.Location = new System.Drawing.Point(464, 6);
+            this.mini1.Name = "mini1";
+            this.mini1.Size = new System.Drawing.Size(19, 19);
+            this.mini1.TabIndex = 20;
+            this.mini1.UseVisualStyleBackColor = false;
+            this.mini1.Click += new System.EventHandler(this.Mini1_Click);
+            // 
+            // izhod1
+            // 
+            this.izhod1.BackColor = System.Drawing.Color.White;
+            this.izhod1.FlatAppearance.BorderSize = 0;
+            this.izhod1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.izhod1.Location = new System.Drawing.Point(489, 6);
+            this.izhod1.Name = "izhod1";
+            this.izhod1.Size = new System.Drawing.Size(19, 19);
+            this.izhod1.TabIndex = 19;
+            this.izhod1.UseVisualStyleBackColor = false;
+            this.izhod1.Click += new System.EventHandler(this.izhod1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(60)))));
             this.ClientSize = new System.Drawing.Size(518, 749);
+            this.Controls.Add(this.mini1);
+            this.Controls.Add(this.izhod1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
@@ -248,14 +248,14 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private CircleButton izhod1;
+        private CircleButton mini1;
     }
 }
 
