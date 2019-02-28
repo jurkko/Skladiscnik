@@ -21,9 +21,7 @@ namespace Skladiščnik
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            listPanel.Add(panelazaloga);
-            listPanel.Add(panelaodhodi);
-            listPanel[index].BringToFront();
+          
         }
 
         
@@ -60,10 +58,14 @@ namespace Skladiščnik
 
         private void button5_Click(object sender, EventArgs e)
         {
-            index = 1;
+            
             panelanav.Height = prihodi.Height;
             panelanav.Top = prihodi.Top;
-            listPanel[index].BringToFront();
+
+            panel9.Visible = false;
+            panel10.Visible = true;
+           
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -73,25 +75,71 @@ namespace Skladiščnik
 
         private void zaloga_Click(object sender, EventArgs e)
         {
-            index = 0;
+            panel9.Visible = true;
+            panel10.Visible = false;
+            
+
             panelanav.Height = zaloga.Height;
             panelanav.Top = zaloga.Top;
-            listPanel[index].BringToFront();
+            
         }
 
         private void narocila_Click(object sender, EventArgs e)
         {
-            panelanav.Height = narocila.Height;
-            panelanav.Top = narocila.Top;
+            panelanav.Height = Dobavitelji.Height;
+            panelanav.Top = Dobavitelji.Top;
+            panel9.Visible = false;
+            panel10.Visible = false;
+            
         }
 
         private void dobavnice_Click(object sender, EventArgs e)
         {
-            panelanav.Height = dobavnice.Height;
-            panelanav.Top = dobavnice.Top;
+            
+            panelanav.Height = Narocila.Height;
+            panelanav.Top = Narocila.Top;
+            panel9.Visible = false;
+            panel10.Visible = false;
+            
         }
 
         private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void panel10_Paint(object sender, PaintEventArgs e)
+        {
+            panel10.Visible = true;
+
+        }
+
+        private void panel11_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label2_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
         {
 
         }
