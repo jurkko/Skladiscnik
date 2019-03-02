@@ -15,21 +15,67 @@ namespace Skladiščnik
     public partial class Form2 : Form
     {
         List<Panel> listPanel = new List<Panel>();
+
+      
+
+
+
+
         SqlDataReader dr;
         SqlParameter slika;
         string lokacijaslike;
+        int counter;
+
 
         public string conString = "Data Source=DESKTOP-2KUD0UO;Initial Catalog=Skladiscnik;Integrated Security=True";
         SqlCommand cmd;
 
         public Form2()
         {
+            listPanel.Add(panel9);
+            listPanel.Add(panel10);
+
+            listPanel.Add(panel11);
+
+            listPanel.Add(panel12);
+            //custum gumba miniziraj in izhod
             InitializeComponent();
             izhod2.MouseEnter += izhod2gumbHover;
             izhod2.MouseLeave += izhod2gumbLeave;
 
             mini2.MouseEnter += mini2gumbHover;
             mini2.MouseLeave += mini2gumbLeave;
+
+
+            //sql connection string + nafilaj datagrid iz baze
+            SqlConnection con = new SqlConnection(conString);
+            con.Open();
+            SqlCommand pr = new SqlCommand("SELECT * FROM [Predmet]", con);
+            DataSet ds = new DataSet();
+            SqlDataAdapter da = new SqlDataAdapter(pr);
+            da.Fill(ds);
+            datagridpredmeti.DataSource = ds;
+            datagridpredmeti.DataMember = ds.Tables[0].ToString();
+
+            //datagrid predmeti oblikovanje
+            
+            datagridpredmeti.BorderStyle = BorderStyle.None;
+            datagridpredmeti.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(238, 239, 249);
+            datagridpredmeti.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            datagridpredmeti.DefaultCellStyle.SelectionBackColor = Color.DarkTurquoise;
+            datagridpredmeti.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
+            datagridpredmeti.BackgroundColor = Color.White;
+            datagridpredmeti.EnableHeadersVisualStyles = false;
+            datagridpredmeti.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            datagridpredmeti.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
+            datagridpredmeti.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            var totalHeight = datagridpredmeti.Rows.GetRowsHeight(DataGridViewElementStates.None);
+            var totalWidth = datagridpredmeti.Columns.GetColumnsWidth(DataGridViewElementStates.None);
+            datagridpredmeti.RowTemplate.Height = 40;
+            datagridpredmeti.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            datagridpredmeti.Columns[7].Visible = false;
+            this.datagridpredmeti.Columns[3].DefaultCellStyle.Font = new Font(this.Font, FontStyle.Bold);
+           
 
         }
 
@@ -100,7 +146,9 @@ namespace Skladiščnik
 
             panel9.Visible = false;
             panel10.Visible = true;
-           
+            panel11.Visible = false;
+            panel12.Visible = false;
+
 
         }
 
@@ -113,7 +161,10 @@ namespace Skladiščnik
         {
             panel9.Visible = true;
             panel10.Visible = false;
-            
+            panel11.Visible = false;
+            panel12.Visible = false;
+
+
 
             panelanav.Height = zaloga.Height;
             panelanav.Top = zaloga.Top;
@@ -124,9 +175,12 @@ namespace Skladiščnik
         {
             panelanav.Height = Dobavitelji.Height;
             panelanav.Top = Dobavitelji.Top;
+
             panel9.Visible = false;
             panel10.Visible = false;
-            
+            panel11.Visible = false;
+            panel12.Visible = true;
+
         }
 
         private void dobavnice_Click(object sender, EventArgs e)
@@ -134,9 +188,12 @@ namespace Skladiščnik
             
             panelanav.Height = Narocila.Height;
             panelanav.Top = Narocila.Top;
+
             panel9.Visible = false;
             panel10.Visible = false;
-            
+            panel11.Visible = true;
+            panel12.Visible = false;
+
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -204,6 +261,7 @@ namespace Skladiščnik
                 //int a = oblika.SelectedIndex;
                 string ime = imepredmeta.Text;
                 string obl = oblika.SelectedItem.ToString();
+                int kol = Convert.ToInt32(kolicina.Text); 
                 int vis = Convert.ToInt32(visina.Text);
                 int sir = Convert.ToInt32(sirina.Text);
                 int dol = Convert.ToInt32(dolzina.Text);
@@ -213,14 +271,24 @@ namespace Skladiščnik
                 slike = brs.ReadBytes((int)Stream.Length);
 
 
-                cmd = new SqlCommand("INSERT INTO Predmet (Ime,Oblika,Višina,Širina,Dolžina,Slika) VALUES ('"+ime+"','"+obl+"','"+vis+"','"+sir+"','"+dol+"',@images)", con);
+                cmd = new SqlCommand("INSERT INTO Predmet (Ime,Oblika,Kolicina,Višina,Širina,Dolžina,Slika) VALUES ('"+ime+"','"+obl+"','"+kol+"','"+vis+"','"+sir+"','"+dol+"',@images)", con);
 
                 MessageBox.Show("dodali ste nov predmet " + ime);
                 cmd.Parameters.Add(new SqlParameter("@images", slike));
                 cmd.ExecuteNonQuery();
                 con.Close();
             }
-}
+
+
+            SqlConnection con2 = new SqlConnection(conString);
+            con2.Open();
+            SqlCommand pr = new SqlCommand("SELECT * FROM [Predmet]", con2);
+            DataSet ds = new DataSet();
+            SqlDataAdapter da = new SqlDataAdapter(pr);
+            da.Fill(ds);
+            datagridpredmeti.DataSource = ds;
+            datagridpredmeti.DataMember = ds.Tables[0].ToString();
+        }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -237,6 +305,31 @@ namespace Skladiščnik
                     pictureBox1.ImageLocation = lokacijaslike;
                 }
             }
+        }
+
+        private void datagridpredmeti_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+           
+        }
+
+        private void label15_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label16_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label19_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel12_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
     
