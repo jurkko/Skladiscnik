@@ -9,3 +9,14 @@ C:\Users\Jure\source\repos\Skladiščnik\Skladiščnik\obj\Debug\Skladiščnik.e
 C:\Users\Jure\source\repos\Skladiščnik\Skladiščnik\obj\Debug\Skladiščnik.pdb
 C:\Users\Jure\source\repos\Skladiščnik\Skladiščnik\obj\Debug\Skladiščnik.Form2.resources
 C:\Users\Jure\source\repos\Skladiščnik\Skladiščnik\obj\Debug\Skladiščnik.csprojAssemblyReference.cache
+D:\Downloads\Skladiscnik-master1\Skladiscnik-master\Skladiščnik\bin\Debug\Skladiščnik.exe.config
+D:\Downloads\Skladiscnik-master1\Skladiscnik-master\Skladiščnik\bin\Debug\Skladiščnik.exe
+D:\Downloads\Skladiscnik-master1\Skladiscnik-master\Skladiščnik\bin\Debug\Skladiščnik.pdb
+D:\Downloads\Skladiscnik-master1\Skladiscnik-master\Skladiščnik\obj\Debug\Skladiščnik.csprojAssemblyReference.cache
+D:\Downloads\Skladiscnik-master1\Skladiscnik-master\Skladiščnik\obj\Debug\Skladiščnik.Form1.resources
+D:\Downloads\Skladiscnik-master1\Skladiscnik-master\Skladiščnik\obj\Debug\Skladiščnik.Form2.resources
+D:\Downloads\Skladiscnik-master1\Skladiscnik-master\Skladiščnik\obj\Debug\Skladiščnik.Properties.Resources.resources
+D:\Downloads\Skladiscnik-master1\Skladiscnik-master\Skladiščnik\obj\Debug\Skladiščnik.csproj.GenerateResource.cache
+D:\Downloads\Skladiscnik-master1\Skladiscnik-master\Skladiščnik\obj\Debug\Skladiščnik.csproj.CoreCompileInputs.cache
+D:\Downloads\Skladiscnik-master1\Skladiscnik-master\Skladiščnik\obj\Debug\Skladiščnik.exe
+D:\Downloads\Skladiscnik-master1\Skladiscnik-master\Skladiščnik\obj\Debug\Skladiščnik.pdb
