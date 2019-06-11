@@ -33,7 +33,7 @@ namespace Skladiščnik
         int counter;
 
 
-        public string conString = "Data Source=Luka-PC;Initial Catalog=Skladiscnik;Integrated Security=True";
+        public string conString = "Data Source=DESKTOP-58RBMLJ;Initial Catalog=Skladiscnik;Integrated Security=True";
         SqlCommand cmd;
         SqlCommand insertArtikle;
 

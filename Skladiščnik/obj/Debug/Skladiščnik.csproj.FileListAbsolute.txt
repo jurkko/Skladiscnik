@@ -20,3 +20,14 @@ D:\Downloads\Skladiscnik-master1\Skladiscnik-master\Skladiščnik\obj\Debug\Skla
 D:\Downloads\Skladiscnik-master1\Skladiscnik-master\Skladiščnik\obj\Debug\Skladiščnik.csproj.CoreCompileInputs.cache
 D:\Downloads\Skladiscnik-master1\Skladiscnik-master\Skladiščnik\obj\Debug\Skladiščnik.exe
 D:\Downloads\Skladiscnik-master1\Skladiscnik-master\Skladiščnik\obj\Debug\Skladiščnik.pdb
+C:\Users\lukal\Desktop\Skladiscnik\Skladiščnik\bin\Debug\Skladiščnik.exe.config
+C:\Users\lukal\Desktop\Skladiscnik\Skladiščnik\bin\Debug\Skladiščnik.exe
+C:\Users\lukal\Desktop\Skladiscnik\Skladiščnik\bin\Debug\Skladiščnik.pdb
+C:\Users\lukal\Desktop\Skladiscnik\Skladiščnik\obj\Debug\Skladiščnik.csprojAssemblyReference.cache
+C:\Users\lukal\Desktop\Skladiscnik\Skladiščnik\obj\Debug\Skladiščnik.Form1.resources
+C:\Users\lukal\Desktop\Skladiscnik\Skladiščnik\obj\Debug\Skladiščnik.Form2.resources
+C:\Users\lukal\Desktop\Skladiscnik\Skladiščnik\obj\Debug\Skladiščnik.Properties.Resources.resources
+C:\Users\lukal\Desktop\Skladiscnik\Skladiščnik\obj\Debug\Skladiščnik.csproj.GenerateResource.cache
+C:\Users\lukal\Desktop\Skladiscnik\Skladiščnik\obj\Debug\Skladiščnik.csproj.CoreCompileInputs.cache
+C:\Users\lukal\Desktop\Skladiscnik\Skladiščnik\obj\Debug\Skladiščnik.exe
+C:\Users\lukal\Desktop\Skladiscnik\Skladiščnik\obj\Debug\Skladiščnik.pdb

@@ -16,7 +16,7 @@ namespace Skladiščnik
     public partial class Form1 : Form
     {
 
-        public string conString = "Data Source=LUKA-PC;Initial Catalog=Skladiscnik;Integrated Security=True";
+        public string conString = "Data Source=DESKTOP-58RBMLJ;Initial Catalog=Skladiscnik;Integrated Security=True";
 
         public Form1()
         {
